@@ -38,6 +38,13 @@ First and foremost, you are about to apply a kernel patch:
 4. Make sure your kernel is supported.
 5. Audit this repository, using the instructions below.
 
+## Dependencies
+
+* rsync
+* git
+* gcc
+* kernel-headers
+
 # Auditing this repository
 
 Download the linux sourcecode from `torvalds/linux`, checkout the tag
@@ -59,13 +66,6 @@ Only in /home/USER/audit/uvc: .gitignore
 Only in /home/USER/audit/uvc: media-uvcvideo-Force-UVC-version-to-1.0a-for-0408-4035.diff
 Only in /home/USER/audit/uvc: README.md
 ```
-
-## Dependencies
-
-* rsync
-* git
-* gcc
-* kernel-headers
 
 # Usage
 
