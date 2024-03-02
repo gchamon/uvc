@@ -7,6 +7,28 @@ Linux kernel UVC for Quanta Computer, Inc. ACER HD User Facing (0408:4035)
 
 **WARNING**: kernel 6.8 is known to modify the uvc driver. Don't apply this patch if on kernel 6.8.
 
+# Introduction
+
+There is a known issue with the aforementioned device reporting UVC version 1.5 but implementing
+UVC 1.0a. A working patch is described in <https://patchwork.kernel.org/project/linux-media/patch/20230115205210.20077-1-laurent.pinchart@ideasonboard.com/>.
+
+On <https://bbs.archlinux.org/viewtopic.php?id=284160> there are instructions on how to download
+the kernel source code and apply the patch. However after kernel reinstallations or upgrades the
+patch is reversed. Re-downloading and reapplying the patch each time is time consuming and error-
+prone, since the upstream repository is rather big (over 2GB).
+
+The repo from which this repository is forked presents a nice alternative that is to separate and
+modify only the necessary files for the UVC patch. However, applying custom kernel module
+patches is a security hole and should not be done without proper code audit.
+
+This repository aims to be a nice balance between the two approaches. The code in this repo is the
+same as in the upstream linux repository. There are only added files for describing the patch and
+for convenience scripts.
+
+Furthermore, to illustrate how one might persist these changes across kernel upgrades, there is a
+convenience script for archlinux installations that rely on pacman hooks to rebuild and reapply the
+patch.
+
 # Prerequisites
 
 First and foremost, you are about to apply a kernel patch:
