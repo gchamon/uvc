@@ -9,5 +9,5 @@ sudo --user $(id --name --user 1000) bash -c 'make -C /lib/modules/$(uname -r)/b
 make -C /lib/modules/$(uname -r)/build M=$PWD modules_install
 
 # reload kernel module to apply changes without having to reboot
-sudo rmmod uvcvideo
-sudo insmod $SCRIPT_DIR/uvcvideo.ko
+rmmod uvcvideo
+insmod $SCRIPT_DIR/uvcvideo.ko
