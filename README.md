@@ -23,7 +23,16 @@ linux repo. If any other changes are spotted either this repository or your loca
 have been compromised and you shouldn't apply the patch. Consider opening an issue.
 
 This is what you are supposed to see when auditing this repository:
-![image](https://github.com/gchamon/uvc/assets/9471861/1f548782-efdb-4c81-a68d-498678c4f85d)
+
+```shell
+$ diff --recursive ~/audit/uvc ~/audit/linux/drivers/media/usb/uvc
+Only in /home/USER/audit/uvc: apply.sh
+Only in /home/USER/audit/uvc: archlinux-deploy.sh
+Only in /home/USER/audit/uvc: .git
+Only in /home/USER/audit/uvc: .gitignore
+Only in /home/USER/audit/uvc: media-uvcvideo-Force-UVC-version-to-1.0a-for-0408-4035.diff
+Only in /home/USER/audit/uvc: README.md
+```
 
 ## Dependencies
 
