@@ -36,7 +36,11 @@ First and foremost, you are about to apply a kernel patch:
 2. Get familiar with what this repo is supposed to do. Read `apply.sh` and the `*.patch` file.
 3. Optionally, if on archlinux, read what `archlinux-deploy.sh` does.
 4. Make sure your kernel is supported.
-5. Audit this repository. Download the linux sourcecode from `torvalds/linux`, checkout the tag
+5. Audit this repository, using the instructions below.
+
+# Auditing this repository
+
+Download the linux sourcecode from `torvalds/linux`, checkout the tag
 related to your kernel version and run `diff --recursive ...` passing both this repo folder and
 `drivers/media/usb/uvc` inside `linux` repository folder.
 
