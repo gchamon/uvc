@@ -34,7 +34,6 @@ Only in /home/USER/audit/uvc: media-uvcvideo-Force-UVC-version-to-1.0a-for-0408-
 Only in /home/USER/audit/uvc: README.md
 ```
 
-
 ## Dependencies
 
 * rsync
