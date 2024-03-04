@@ -44,6 +44,10 @@ First and foremost, you are about to apply a kernel patch:
 * git
 * gcc
 * kernel-headers
+* (optional) kernel-modules-hook (for archlinux pacman hook)
+
+The last dependency is necessary to keep the current kernel modules headers and prevent the pacman
+hook from breaking upon kernel upgrades.
 
 # Auditing this repository
 
