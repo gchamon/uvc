@@ -4,6 +4,15 @@ set -euxo pipefail
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 cd $SCRIPT_DIR
 
+cleanup () {
+    if ! make -C /lib/modules/$(uname -r)/build M=$PWD clean; then
+        echo Unable to cleanup build. Skipping...
+    fi
+    git reset --hard HEAD
+}
+trap cleanup EXIT
+cleanup
+
 git apply -v media-uvcvideo-Force-UVC-version-to-1.0a-for-0408-4035.diff
 
 # build and install the kernel mod persistently
@@ -17,5 +26,3 @@ else
     echo Unable to remove uvcvideo module, probably in use. Skipping...
 fi
 
-make -C /lib/modules/$(uname -r)/build M=$PWD clean
-git reset --hard HEAD
