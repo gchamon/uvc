@@ -1,3 +1,6 @@
+**Deprecation notice:** It seems with kernel 6.12 or maybe earlier (build just stopped working
+after 6.12) the driver is supported natively in the kernel, making this repo obsolete.
+
 # uvc video 
 Linux kernel UVC for Quanta Computer, Inc. ACER HD User Facing (0408:4035)
 
